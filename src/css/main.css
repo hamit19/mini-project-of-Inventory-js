@@ -1,0 +1,22 @@
+@tailwind base;
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 65.333%;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .flex-centering {
+    @apply flex items-center justify-center;
+  }
+}
+
+@tailwind utilities;
