@@ -17,6 +17,19 @@
   .flex-centering {
     @apply flex items-center justify-center;
   }
+  .text-title {
+    @apply text-2xl font-bold text-gray-50;
+  }
+
+  .custom-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }
 
 @tailwind utilities;
+
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
