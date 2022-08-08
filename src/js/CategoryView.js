@@ -4,10 +4,19 @@ const categoryTitle = document.querySelector("#title-of-cag");
 const categoryDescription = document.querySelector("#des-of-cag");
 const addNewCategoryBtn = document.querySelector("#add-new-category");
 const selectCategory = document.querySelector("#select-category");
+const addNewCategoryShow = document.querySelector(".add-new-category-form");
+const cancelCategory = document.querySelector("#cancel-category");
 
 class CategoryView {
   constructor() {
     addNewCategoryBtn.addEventListener("click", (e) => this.addNewCategory(e));
+    addNewCategoryShow.addEventListener("click", () => {
+      addNewCategoryShow.classList.toggle("active");
+    });
+    cancelCategory.addEventListener("click", (e) => {
+      e.preventDefault();
+      addNewCategoryShow.classList.remove("active");
+    });
     this.categories = [];
   }
 
@@ -26,6 +35,7 @@ class CategoryView {
 
     categoryTitle.value = "";
     categoryDescription.value = "";
+    addNewCategoryShow.classList.remove("active");
   }
 
   setApp() {

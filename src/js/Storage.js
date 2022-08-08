@@ -48,12 +48,20 @@ export default class Storage {
   }
 
   // gets all products if products exists in our localStorage if it dose not exist in localStorage it'll return a empty array
-  static getAllProducts() {
+  static getAllProducts(typeSort = "newest") {
     const products = JSON.parse(localStorage.getItem("products")) || [];
 
-    const sortedProducts = products.sort((a, b) => {
-      return Date.parse(a.createdAt) > Date.parse(b.cratedAd) ? -1 : 1;
-    });
+    let sortedProducts = [];
+
+    if (typeSort === "oldest") {
+      sortedProducts = products.sort((a, b) => {
+        return Date.parse(a.cratedAd) > Date.parse(b.createdAt) ? -1 : 1;
+      });
+    } else if (typeSort === "newest") {
+      sortedProducts = products.sort((a, b) => {
+        return Date.parse(a.cratedAd) < Date.parse(b.createdAt) ? 1 : -1;
+      });
+    }
 
     return sortedProducts;
   }
@@ -88,5 +96,13 @@ export default class Storage {
 
       localStorage.setItem("products", JSON.stringify(products));
     }
+  }
+
+  static deleteProduct(id) {
+    const products = this.getAllProducts();
+
+    let filteredProducts = products.filter((p) => p.id !== id);
+
+    localStorage.setItem("products", JSON.stringify(filteredProducts));
   }
 }

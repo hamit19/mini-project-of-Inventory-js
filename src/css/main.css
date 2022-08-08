@@ -33,3 +33,11 @@
   -webkit-appearance: none;
   margin: 0;
 }
+
+.add-new-category-form.active ~ form {
+  display: flex !important;
+}
+
+.add-new-category-form.active {
+  color: #f8fafc !important;
+}
