@@ -1,10 +1,10 @@
 # mini-project-of-Inventory-js
 
-<h2> Checkout the mini-project online: <a href="https://inventory-mini-project-hamid-hassani.netlify.app" > Click here to redirect! </a> </h2>
+<h3> Checkout the mini-project online: <a href="https://inventory-mini-project-hamid-hassani.netlify.app" > Click here to redirect! </a> </h3>
 
-![Inventory JavaScriptt](https://user-images.githubusercontent.com/96312176/183644217-2bcb0ff8-53b2-418e-8991-f5ba5aba3d0b.png)
+# ![Inventory JavaScriptt](https://user-images.githubusercontent.com/96312176/183644217-2bcb0ff8-53b2-418e-8991-f5ba5aba3d0b.png)
 
-<hr>
+
 
 
 This is a practical mini-project of the Inventory App. I've used HTML, Tailwindcss, and OOP JavaScript to implement the mini-project.  
